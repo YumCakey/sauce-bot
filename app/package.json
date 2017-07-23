@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "autoupdater": "^1.0.0",
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "https": "^1.0.0",
@@ -14,17 +15,15 @@
     "ytdl-core": "^0.7.22"
   },
   "devDependencies": {
-    "electron-builder": "^19.16.2",
     "electron-packager": "^8.5.1",
     "electron-prebuilt": "^0.35.2"
   },
-  "build": {
-    "appId": "sauce.bot"
+  "auto-updater": {
+    "repo": "/YumCakey/sauce-bot",
+    "branch": "master"
   },
   "scripts": {
-    "start": "electron main.js",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "start": "electron main.js"
   },
   "author": "Chris Bardon",
   "license": "ISC"
