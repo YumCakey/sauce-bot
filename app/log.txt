@@ -1,0 +1,8 @@
+[7/23/2017, 3:33:31 PM] https://www.youtube.com/watch?v=TJUVNg5zxAs,https://www.youtube.com/watch?v=7wtfhZwyrcc,https://www.youtube.com/watch?v=D5drYkLiLI8
+[7/23/2017, 3:33:31 PM] Update Queue List called
+[7/23/2017, 3:33:34 PM] Stir pressed!
+[7/23/2017, 3:33:35 PM] Search song!
+[7/23/2017, 3:33:35 PM] Error: Video does not contain any available formats
+[7/23/2017, 3:35:06 PM] Stir pressed!
+[7/23/2017, 3:35:06 PM] Search song!
+[7/23/2017, 3:35:07 PM] Error: Video not found

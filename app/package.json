@@ -1,0 +1,31 @@
+{
+  "name": "SauceBot",
+  "version": "2.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "process": "^0.11.9",
+    "stream": "0.0.2",
+    "util": "^0.10.3",
+    "youtube.get-video-info": "^1.0.0",
+    "ytdl-core": "^0.7.22"
+  },
+  "devDependencies": {
+    "electron-builder": "^19.16.2",
+    "electron-packager": "^8.5.1",
+    "electron-prebuilt": "^0.35.2"
+  },
+  "build": {
+    "appId": "sauce.bot"
+  },
+  "scripts": {
+    "start": "electron main.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Chris Bardon",
+  "license": "ISC"
+}

@@ -1,0 +1,400 @@
+@font-face{
+    font-family: saucebit;
+    src: url(./Roboto-Black.ttf);
+}
+
+#infoContainer{
+    font-size: 1.75em;
+}
+
+.playlist-playing{
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: saucebit;
+    color: #ffffff;
+    background-color: #bb0000;
+}
+
+.playlist-not-playing{
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: saucebit;
+    color: #ffffff;
+    background-color: #555555;
+}
+
+.list-item-playing{
+    padding: 0px;
+    height:40px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: saucebit;
+    color: #ffffff;
+    background-color: #bb0000;
+}
+
+.list-item-not-playing{
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: saucebit;
+    color: #ffffff;
+    background-color: #555555;
+}
+
+#windowBar{
+    position:absolute;
+    top: 0px;
+    left:0px;
+    width:520px;
+    height:16px;
+    background-color:#161616;
+}
+
+#closeApp{
+    width:16px;
+    height:16px;
+    position:absolute;
+    right:26px;
+    top:0px;
+    background-color: #161616;
+}
+
+#minimizeApp{
+    width:16px;
+    height:16px;
+    position:absolute;
+    right:43px;
+    top:0px;
+    background-color: #161616;
+}
+
+#currentPlaylist{
+    text-align: center;
+    font-size: .5em;
+    height:17px;
+}
+
+#queueList{
+    border-bottom: solid 2px;
+    border-bottom-color: #872828;
+    border-top: solid 2px;
+    border-top-color: #872828;
+    background-color:#363636;
+}
+
+#playlistList{
+    border-bottom: solid 2px;
+    border-bottom-color: #872828;
+    border-top: solid 2px;
+    border-top-color: #872828;
+    background-color:#363636;
+    display:none;
+}
+
+#playlist-button{
+    background-color: #872828;
+    width:90px;
+    height:16px;
+    padding: .3em;
+    font-size: .5em;
+    position:absolute;
+    right:10px;
+    top: 11px;
+    cursor: pointer;
+}
+
+body{
+    text-align: center;
+    font-family: saucebit;
+    color: #ffffff;
+    background-color: #212121;
+    overflow:hidden;
+}
+
+#audioPlayer{
+    display:none;
+}
+
+#repeatMode-button{
+    width:32px;
+    height:32px;
+    margin: 3px;
+    border-radius: 4px;
+    background-color:#872828;
+    display:inline-block;
+    position:absolute;
+    right: 102px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+#playPause-button{
+    width:32px;
+    height:32px;
+    margin: 3px;
+    border-radius: 4px;
+    background-color:#872828;
+    display:inline-block;
+    position:absolute;
+    right: 139px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+#search-button{
+    width:32px;
+    height:32px;
+    margin: 3px;
+    border-radius: 4px;
+    background-color:#872828;
+    display:inline-block;
+    position:absolute;
+    right: 176px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.playIcon{
+    width:24px;
+    height:24px;
+    border-radius: 4px;
+    background-color:#872828;
+    display:inline-block;
+    float: right;
+    cursor: pointer;
+}
+
+.deleteIcon{
+    width:24px;
+    height:24px;
+    margin-left:4px;
+    border-radius: 4px;
+    background-color:#872828;
+    display:inline-block;
+    float: right;
+    cursor: pointer;
+}
+
+#settings{
+    width:24px;
+    height:24px;
+    margin-left:4px;
+    border-radius: 4px;
+    /*background-color:#872828;*/
+    display:inline-block;
+    position:absolute;
+    top: 11px;
+    left: 10px;
+    cursor: pointer;
+}
+
+#help{
+    width:24px;
+    height:24px;
+    margin-left:4px;
+    border-radius: 4px;
+    /*background-color:#872828;*/
+    display:inline-block;
+    position:absolute;
+    top: 11px;
+    left: 46px;
+    cursor: pointer;
+}
+
+.qdeleteIcon{
+    width:20px;
+    height:20px;
+    border-radius: 4px;
+    background-color:#ffffff;
+    display:inline-block;
+    cursor: pointer;
+}
+
+.songDiv{
+    display:inline-block;
+    position: relative;
+    top: -8px;
+}
+
+.moveDiv{
+    width:41px;
+    margin-top:2px;
+    display: inline-block;
+    visibility:hidden;
+    cursor:pointer;
+}
+
+.moveUp{
+    display:block;
+    margin-bottom: 2px;
+}
+
+.moveDown{
+    display:block;
+    margin-top:2px;
+}
+
+#vol-control{
+    width: 97px;
+    display: inline-block;
+    position: absolute;
+    right: 2px;
+    bottom: 11px;
+    cursor: pointer;
+}
+
+#query{
+    height:26px;
+    width: 267px;
+    position: absolute;
+    right: 217px;
+    bottom:8px;
+}
+
+#search-container{
+    height:38px;
+}
+
+#stir-button{
+    width:32px;
+    height:32px;
+}
+
+.scroll-left-playing {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    background: #bb0000;
+    color: #ffffff;
+    border: 1px solid #999999;
+}
+.scroll-left-playing span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+    0%   {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll-left-not-playing {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    background: #bb0000;
+    color: #ffffff;
+    border: 1px solid #999999;
+}
+.scroll-left-not-playing span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+    0%   {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#seek {
+    width: 250px;
+    margin-top: -5px;
+}
+
+input{
+    display:none\9!important;
+}
+#seek {
+    -webkit-appearance: none;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 43px;
+    display: block;
+    width: 77%;
+    height: 15px;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: #363636;
+    left: 3px;
+
+    -webkit-box-shadow: inset 0px 4px 4px rgba(0,0,0,.6);
+    -moz-box-shadow: inset 0px 4px 4px rgba(0,0,0,.6);
+    box-shadow: inset 0px 4px 4px rgba(0,0,0,.6);
+}
+
+#seekTime{
+    position:absolute;
+    bottom: 28px;
+    right: 4px;
+    width: 100px;
+}
+
+#vol-control {
+    width: 97px;
+    display: inline-block;
+    position: absolute;
+    right: 2px;
+    bottom: 14px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border: 1px solid black;;
+    height: 15px;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: #363636;
+
+    -webkit-box-shadow: inset 0px 4px 4px rgba(0,0,0,.6);
+    -moz-box-shadow: inset 0px 4px 4px rgba(0,0,0,.6);
+    box-shadow: inset 0px 4px 4px rgba(0,0,0,.6);
+}
+
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border:1px solid black;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #ffffff; /* Old browsers */
+    /*
+    background: -webkit-linear-gradient(top, #ffffff 0%, #75dbd6 13%, #5ec4bf 33%, #57bbb6 47%, #419d99 80%, #378f8b 100%);
+
+    background: -moz-linear-gradient(top, #80e4df 0%, #75dbd6 13%, #5ec4bf 33%, #57bbb6 47%, #419d99 80%, #378f8b 100%);
+    background: -o-linear-gradient(top, #80e4df 0%, #75dbd6 13%, #5ec4bf 33%, #57bbb6 47%, #419d99 80%, #ffffff 100%);
+    background: linear-gradient(top, #ffffff 0%, #ffffff 13%, #ffffff 33%, # 47%, #ffffff 80%, #ffffff 100%); /* W3C */
+
+}

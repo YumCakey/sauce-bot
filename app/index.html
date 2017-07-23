@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sauce Bot</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="./PlayerStyle.css">
+    <style>
+        #queueList { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+        #queueList li { margin: 0 3px 3px 3px; padding: 0em; font-size: .75em; height: 40px; }
+        #queueList li span { position: absolute; margin-left: -1.3em; }
+        #playlistList {margin: 0; padding: 0; width: 100%; }
+        #playlistList li { margin: 0 3px 3px 3px; padding: 0.4em; font-size: .75em; height: 24px; }
+        #playlistList li span { position: absolute; margin-left: -1.3em; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script src="js/search.js"></script>
+    <script src="./js/commands.js"></script>
+    <script>
+        document.addEventListener("keydown", function (e) {
+            if (e.which === 13) {
+                commandHelper();
+            } else if (e.which === 116) {
+                location.reload();
+            }else if(e.which === 123){
+                require('remote').getCurrentWindow().toggleDevTools();
+            }
+        });
+    </script>
+</head>
+<!--<header><div id="windowBar"><img id="closeApp" onclick="closeWindow()" onmouseenter="closeHighlight()" onmouseleave="closeUnhighlight()" src="./images/closeButton.png"><!--<img id="minimizeApp" onclick="minWindow()" onmouseenter="minHighlight()" onmouseleave="minUnhighlight()" src="./images/minimizeButton.png"></div>
+</header>-->
+<body>
+<div id="infoContainer" >
+    <img id="settings" onclick="getDurLim()" src="./images/settingsIcon.png"><img id="help" onclick="getHelp()" src="./images/Help.png"><p id="heading" style="-webkit-margin-before: .25em;-webkit-margin-after: 0em;">Current Queue</p><div id="playlist-button" onclick="toggleLists()">Playlists</div>
+    <div id="currentPlaylist">Current playlist:</div>
+    <ul id="queueList" style="height:200px;overflow: auto;"></ul>
+    <ul id="playlistList" style="height:200px;overflow: auto;"></ul>
+</div>
+<audio id="audioPlayer" controls src=""></audio>
+<input type="range" id="seek" value="0" max=""/><p id="seekTime">--/--</p>
+<div id="search-container">
+    <input id="query" value='' type="text"/>
+    <div id="search-button" onclick="commandHelper()"><img id="stir-button" src="./images/StirButton.png"></div>
+    <img id="repeatMode-button" src="./images/NoRepeat.png" onclick="repeatToggles()">
+    <img id="playPause-button" src="./images/Play.png" onclick="playToggle()">
+    <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+
+</div>
+</body>
+</html>
